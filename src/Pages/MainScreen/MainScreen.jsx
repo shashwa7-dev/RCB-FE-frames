@@ -3,17 +3,32 @@ import logo from '../../static/logo.svg'
 import rcb_logo from '../../static/rcb_logo.svg'
 import data from '../../data/rcb_players.json'
 import { Navbar } from '../../Components/Navbar/Navbar'
+import {useState} from 'react'
 
 
-const InputFldWithBtn = () =>{
+const InputFldWithBtn = ({showOtpField}) =>{
     return(
         <div class='inputFl_container'>
-            <input placeholder='Verify Email'/> 
-            <button>Send OTP</button>
+            <input className='roundBox input' placeholder='Verify Email' required/> 
+            <button onClick={() => showOtpField(true)}>Send OTP</button>
+        </div>
+    )
+}
+
+const OtpBlocks = () =>{
+    return(
+        <div class='otp_blocks_container'>
+            <input type="text" className="otp_digit d1" required autoFocus maxlength="1" />
+            <input type="text" className="otp_digit d2" required maxlength="1"/>
+            <input type="text" className="otp_digit d3" required maxlength="1"/>
+            <input type="text" className="otp_digit d4" required maxlength="1"/>
+            <button className='submitOtp'>Verify</button>
         </div>
     )
 }
 export const MainScreen = () => {
+    const [showOtpField, setShowOtpField] = useState(false)
+
     return (
         <div className="Mainscreen">
                 <Navbar />
@@ -29,7 +44,7 @@ export const MainScreen = () => {
                     <p>
                     some more information about the giveaway some more information about the giveaway 
                     </p>  
-                    <InputFldWithBtn />
+                    {showOtpField ?  <OtpBlocks /> : <InputFldWithBtn showOtpField = {setShowOtpField}/> }
                 </div>
                 </div>
         </div>
