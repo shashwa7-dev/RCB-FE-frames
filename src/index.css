@@ -1,4 +1,13 @@
 /* GLOBAL STYLE PRESETS */
+:root{
+  --color-primary: #FFFFFF;
+  --color-secondary: #FF5560;
+  --color-gradient:linear-gradient(93.15deg, #E11D17 22.23%, rgba(255, 77, 119, 0.76) 71.23%);
+  --color-black: #1A1A1A;
+  --font-regular:400;
+  --font-bold:700;
+  --font-hippo:900;
+}
 
 /* FONTS */
 
@@ -31,6 +40,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color:var(--color-primary);
 }
 
 /* Remove default margin */
@@ -65,6 +78,7 @@ body {
   line-height: 1.5;
   font-family: Caustenround, sans-serif;
   background-color: black;
+  color:white;
 }
 
 /* A elements that don't have a class get default styles */

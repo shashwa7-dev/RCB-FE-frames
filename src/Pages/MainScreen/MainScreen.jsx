@@ -33,19 +33,19 @@ export const MainScreen = () => {
         <div className="Mainscreen">
                 <Navbar />
                 <div className='content_container'>
-                <div className='main_nft_display'>
-                    <video src={data[0].vid_url} autoPlay loop muted playsInline></video>
-                </div>
+                    <div className='main_nft_display'>
+                        <video src={data[0].vid_url} autoPlay loop muted playsInline></video>
+                    </div>
 
-                <div className='main_content'>
-                <img src={rcb_logo} alt="" className="logo_content" />
-                    <h1>Get a chance to win a 
-    RCB NFT Card</h1>
-                    <p>
-                    some more information about the giveaway some more information about the giveaway 
-                    </p>  
-                    {showOtpField ?  <OtpBlocks /> : <InputFldWithBtn showOtpField = {setShowOtpField}/> }
-                </div>
+                    <div className='main_content'>
+                    <img src={rcb_logo} alt="" className="logo_content" />
+                        <h1>Get a chance to win a 
+        RCB NFT Card</h1>
+                        <p>
+                        some more information about the giveaway some more information about the giveaway 
+                        </p>  
+                        {showOtpField ?  <OtpBlocks /> : <InputFldWithBtn showOtpField = {setShowOtpField}/> }
+                    </div>
                 </div>
         </div>
     )

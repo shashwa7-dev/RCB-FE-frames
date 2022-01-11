@@ -1,21 +1,11 @@
-:root{
-    --color-primary: #FFFFFF;
-    --color-secondary: #FF5560;
-    --color-gradient:linear-gradient(92.8deg, #FF0C1B 0%, rgba(255, 85, 96, 0.67) 117.12%, rgba(255, 85, 96, 0.97) 117.12%);
-    --font-regular:400;
-    --font-bold:700;
-    --font-hippo:900;
-}
-
 .Mainscreen{
-    width: 100vw;
-    height:100vh;
-    background:url('../../static/rcbmobBG.svg');
-    background-position: center;
+    width: 100vw;  
+    height: 100%; 
+    background:url('../../static/mobBG2.svg');
+    background-position:initial;
     background-repeat: no-repeat;
     background-size: cover;
     color:var(--color-primary);
-    position:reletive;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,8 +29,6 @@
 .logo{
     max-width:8rem;
 }
-
-
 
 .main_nft_display{
     margin:1rem auto;
@@ -125,14 +113,14 @@ z-index: 10;
     grid-template-columns: repeat(4, 1fr);
 }
 .otp_blocks_container input{
+    border:2px solid var(--color-secondary);
     font-size: 1.25rem;
     text-align: center;
-    font-weight: var(--font-bold)
+    font-weight: var(--font-bold);
 }
 .otp_blocks_container  button{
     margin-top:.5rem;
     margin-left:.5rem;
-    background: #E11D17;
     width: 100%;
     padding:.5rem;
     border-radius: 0.5rem;
@@ -156,6 +144,7 @@ z-index: 10;
     
      .Mainscreen{
        background: url('../../static/BG1.png');
+       height: 100vh;
     }
     .Mainscreen .main_content h1{
         font-size: 3rem;
