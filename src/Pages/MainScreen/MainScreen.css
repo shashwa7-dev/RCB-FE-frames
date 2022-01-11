@@ -1,0 +1,146 @@
+:root{
+    --color-primary: #FFFFFF;
+    --color-secondary: #FF5560;
+    --color-gradient:linear-gradient(92.8deg, #FF0C1B 0%, rgba(255, 85, 96, 0.67) 117.12%, rgba(255, 85, 96, 0.97) 117.12%);
+    --font-regular:400;
+    --font-bold:700;
+    --font-hippo:900;
+}
+
+.Mainscreen{
+    width: 100vw;
+    height:100vh;
+    background:url('../../static/rcbmobBG.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:var(--color-primary);
+    position:reletive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar{
+    justify-content: space-around;
+    align-items: center;
+    padding:0.5rem;
+    margin-top:0.5rem;
+    height: 5rem; 
+}
+
+.logo_content{
+    display: none;
+}
+
+
+.main_nft_display{
+    margin:1rem auto;
+    width: 85%;
+    padding:1rem;
+    background-color: rgba(0, 0, 0, 0);
+}
+.main_nft_display::before{
+    inset: 0;
+    position: absolute;
+    content: "";
+    background-color: rgba(255, 15, 15, 0);
+    filter: blur(2px);
+
+}
+
+.main_nft_display video{
+    height: 100%;
+    width: 100%;
+  object-fit:cover
+}
+
+.Mainscreen .content_container .main_content{
+    padding:.5rem;
+    width: 90%;
+    margin:1rem auto;
+}
+
+
+.Mainscreen .main_content h1{
+    background: var(--color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 2rem;
+    font-size: 2.25rem;
+    font-weight: var(--font-bold);
+}
+.Mainscreen .main_content p{
+    margin-top:1rem;
+    font-size: 1.25rem;
+}
+
+.inputFl_container{
+    margin-top:1rem;
+    display: grid;
+}
+
+.inputFl_container input{
+padding:1rem;
+outline:none;
+border-width: 2px;
+color: var(--color-primary);
+font-weight: var(--font-bold);
+border-image-slice: 1;
+border-style: solid;
+border-image-source: linear-gradient(to left, #FF2936 0%, #FFFFFF 100%);
+background-origin: border-box;
+background-clip: content-box, border-box;
+background: rgba(255, 255, 255, 0.096);
+z-index: 10;
+}
+.inputFl_container button{
+    width:50%;
+    margin-top:.5rem;
+    padding:.5rem;
+    font-weight: var(--font-bold);
+    color:var(--color-primary);
+    outline:none;
+    background: linear-gradient(93.15deg, #E11D17 22.23%, rgba(255, 77, 119, 0.76) 71.23%);
+    border:2px solid white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@media (min-width:60em) {
+    
+     .Mainscreen{
+       background: url('../../static/BG1.png');
+    }
+    .Mainscreen .main_content h1{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .navbar{
+        justify-content: start;
+        padding:2rem;
+        
+     }
+     .logo:nth-child(2){
+         display: none;
+     }
+     .logo_content{
+         display: block;
+     }
+     .main_content h1, .main_content p{
+         margin: 2rem 0; 
+     }
+     .inputFl_container{
+         width:70%
+     }
+     .content_container{
+         display: flex;
+         flex-direction: row-reverse;
+         width: 85%;
+     }
+     .main_nft_display{
+        padding:0;
+    }
+     
+
+}
+

@@ -1,5 +1,31 @@
 /* GLOBAL STYLE PRESETS */
 
+/* FONTS */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap'); */
+@font-face {
+  font-family: "Caustenround";
+  src: url(../src/static/fonts/CaustenRound-Black.f3236fdf.woff) format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Caustenround";
+  src: url(../src/static/fonts/CaustenRound-Regular.8aea0fac.woff) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Caustenround";
+  src: url(../src/static/fonts/CaustenRound-SemiBold.943ece75.woff) format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* Box sizing rules */
 *,
 *::before,
@@ -37,6 +63,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: Caustenround, sans-serif;
+  background-color: black;
 }
 
 /* A elements that don't have a class get default styles */
