@@ -6,7 +6,6 @@ import {Routes, Route} from 'react-router-dom'
 //Components Import
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">

@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding:1rem;
+    padding:.5rem;
     position: relative;
 }
 
@@ -26,7 +26,7 @@
     place-self:top;
     position: absolute;
     top:0;
-    margin-top:2rem;
+    margin-top:1rem;
 }
 .task_container{
     width: 100%;
@@ -35,11 +35,12 @@
     width:100%;
     margin:1rem auto;
     display: flex;
-    border:2px solid var(--color-secondary);
+    border:1px solid var(--color-secondary);
     border-radius:.5rem;
     padding:.5rem;
     cursor: pointer;
 }
+
 .submit_task{
     border:1px solid var(--color-secondary);
     padding:.25rem;
@@ -65,7 +66,7 @@
     background: var(--color-gradient);
     padding:.5rem;
     width:50%;
-    margin:auto;
+    margin:1rem auto;
     border-radius: .5rem;
     text-align: center;
     font-weight: var(--font-bold);
@@ -73,6 +74,31 @@
     font-size:1.2rem;
 }
 
+@media (max-width:24em){
+    .task_screen{
+        padding:.5rem;
+    }
+    .rcb_logo{
+        width:7rem;
+    }
+    .heading{
+        margin-bottom:0.25rem;
+    }
+    .dehidden_logo{
+        margin-top: .75rem;
+    }
+    .task_container{
+        padding:0;
+    }
+    .task{
+        margin:.75rem auto;
+        padding:.25rem;
+    }
+    .final_submit{
+        padding:.25rem;
+    }
+
+}
 @media (min-width:50em) {
     .task_screen{
         background: url('../../static/BG1.png');
